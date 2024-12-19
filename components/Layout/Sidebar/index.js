@@ -61,7 +61,9 @@ function Sidebar({ showMenu, setShowMenu, node, name, navLinks }) {
                 height={"40px"}
                 className="rounded-full ml-5"
               />
-              <h1 className=" pl-6 text-xl text-black lg:text-2xl">OTIKA</h1>
+              <h1 className=" pl-6 text-xl text-black lg:text-2xl">
+                Shannon IT
+              </h1>
             </div>
 
             <span
