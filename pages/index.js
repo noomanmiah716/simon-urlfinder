@@ -130,9 +130,6 @@ function HomePage() {
                 <div className="py-2 px-3 text-black">
                   <p className="uppercase font-semibold">{card.name}</p>
                   <p className="font-bold text-xl">{card.count}</p>
-                  <p className="mt-2 text-sm">
-                    <span className="mr-3">3.48%</span> Since last month
-                  </p>
                 </div>
               </div>
             </div>
