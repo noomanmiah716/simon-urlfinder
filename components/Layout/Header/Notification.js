@@ -43,9 +43,9 @@ function Notification() {
 
     if (adminId) {
       const pusher = new Pusher(
-        "1566e3b3df0452142fc3", // APP_KEY
+        "cdcdb714d33f15d59e8f", // APP_KEY
         {
-          cluster: "ap2",
+          cluster: "ap1",
           encrypted: true,
         }
       );
