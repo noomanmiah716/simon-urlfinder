@@ -28,7 +28,7 @@ function PosterEditPage() {
   const password = fetchedData?.data?.data?._doc.password;
   const posterId = fetchedData?.data?.data?._doc.posterId;
   const yourLinks = fetchedData?.data?.data?._doc.links;
-
+  const verifyId = fetchedData?.data?.data?._doc.verifyId;
   const { data: fetchedLinks, isLoading: isLoading2 } = useGetData(
     `/link/get/${id}`
   );
@@ -72,6 +72,7 @@ function PosterEditPage() {
             adminId={adminId}
             username={username}
             password={password}
+            verifyId={verifyId}
             posterId={posterId}
             yourLinks={yourLinks}
             linksAvailable={linksAvailable}

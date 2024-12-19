@@ -12,6 +12,7 @@ function EditPosterForm({
   posterId,
   adminId,
   username,
+  verifyId,
   password,
   posterEditId,
   yourLinks,
@@ -163,9 +164,9 @@ function EditPosterForm({
                           key={i}
                           label={`${link
                             ?.split("https://")
-                            ?.join("")}/${adminId}/${posterId}`}
+                            ?.join("")}/${adminId}/${posterId}/${verifyId}`}
                           name="availableLinks"
-                          value={`${link}/${adminId}/${posterId}`}
+                          value={`${link}/${adminId}/${posterId}/${verifyId}`}
                         />
                       ))}
                     </div>
