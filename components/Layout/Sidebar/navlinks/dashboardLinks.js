@@ -27,9 +27,14 @@ export const dashboardLinks = [
   },
   {
     name: "Information",
-    link: "/id-card",
-    icon: <FaImage />,
+    link: "/collections",
+    icon: <FaEnvelope />,
   },
+  // {
+  //   name: "Information",
+  //   link: "/id-card",
+  //   icon: <FaImage />,
+  // },
 
   // {
   //   name: "Clicks",
