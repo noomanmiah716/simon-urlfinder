@@ -101,12 +101,17 @@ function HomePage() {
 
   const cards = [
     {
-      name: "Today Found",
+      name: "Mobile Click",
       count: cardsData?.todayFound,
       color: "bg-[#FFFF]",
     },
     {
-      name: "Today Click",
+      name: "Desktop Click",
+      count: cardsData?.todayClick,
+      color: "bg-[#FFFF]",
+    },
+    {
+      name: "Tablet Click",
       count: cardsData?.todayClick,
       color: "bg-[#FFFF]",
     },
