@@ -133,9 +133,9 @@ function HomePage() {
   return (
     <div className="relative">
       <Loader isLoading={isLoading || isLoading2}>
-        <div className="flex flex-wrap justify-center gap-4 p-4">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 p-4">
           {cards.map((stat, index) => (
-            <div key={index} className="w-full sm:w-1/2 lg:w-1/4 p-2">
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/5 p-2">
               <div className="p-4 rounded-lg shadow-lg bg-white flex justify-between flex-row items-center">
                 <div className="">
                   <h2 className="mt-2 text-lg font-semibold">{stat.title}</h2>
