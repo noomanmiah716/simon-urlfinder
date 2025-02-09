@@ -105,28 +105,28 @@ function HomePage() {
   const cards = [
     {
       title: "MOBILE CLICK",
-      count: 2,
+      count: cardsData?.mobileClick,
       description: "Today history only",
       color: "bg-red-500",
       icon: <FaMobileAlt className="text-white text-2xl" />,
     },
     {
       title: "DESKTOP CLICK",
-      count: 2,
+      count: cardsData?.desktopClick,
       description: "Today history only",
       color: "bg-orange-500",
       icon: <FaDesktop className="text-white text-2xl" />,
     },
     {
       title: "TABLET CLICK",
-      count: 0,
+      count: cardsData?.tabletClick,
       description: "Today history only",
       color: "bg-green-500",
       icon: <FaTabletAlt className="text-white text-2xl" />,
     },
     {
-      title: "TOTAL ACCOUNTS",
-      count: 15,
+      title: "TOTAL CLICK",
+      count: cardsData?.totalClick,
       description: "This year history",
       color: "bg-blue-500",
       icon: <FaUsers className="text-white text-2xl" />,
