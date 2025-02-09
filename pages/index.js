@@ -70,7 +70,7 @@ import Loader from "../components/common/Loader";
 import Table from "../components/Table";
 import { clicksColumn } from "../components/Table/columns/clicksColumn";
 import useGetData from "../hooks/useGetData";
-
+import { FaMobileAlt, FaDesktop, FaTabletAlt, FaUsers } from "react-icons/fa";
 function HomePage() {
   const { data } = useSession();
   const admin = data?.user?.admin;
@@ -101,40 +101,51 @@ function HomePage() {
 
   const cards = [
     {
-      name: "Mobile Click",
-      count: cardsData?.todayFound,
-      color: "bg-[#FFFF]",
+      title: "MOBILE CLICK",
+      count: 2,
+      description: "Today history only",
+      color: "bg-red-500",
+      icon: <FaMobileAlt className="text-white text-2xl" />,
     },
     {
-      name: "Desktop Click",
-      count: cardsData?.todayClick,
-      color: "bg-[#FFFF]",
+      title: "DESKTOP CLICK",
+      count: 2,
+      description: "Today history only",
+      color: "bg-orange-500",
+      icon: <FaDesktop className="text-white text-2xl" />,
     },
     {
-      name: "Tablet Click",
-      count: cardsData?.todayClick,
-      color: "bg-[#FFFF]",
+      title: "TABLET CLICK",
+      count: 0,
+      description: "Today history only",
+      color: "bg-green-500",
+      icon: <FaTabletAlt className="text-white text-2xl" />,
     },
     {
-      name: "Total Found",
-      count: cardsData?.totalFound,
-      color: "bg-[#FFFF]",
+      title: "TOTAL ACCOUNTS",
+      count: 15,
+      description: "This year history",
+      color: "bg-blue-500",
+      icon: <FaUsers className="text-white text-2xl" />,
     },
   ];
 
   return (
     <div className="relative">
       <Loader isLoading={isLoading || isLoading2}>
-        <div className="mt-12 flex flex-col lg:flex-row justify-between gap-5 lg:gap-10">
-          {cards.map((card, i) => (
-            <div
-              key={i}
-              className={`min-h-[97px] w-full shadow-xl rounded-md overflow-hidden ${card.color}`}
-            >
-              <div className="flex h-full">
-                <div className="py-2 px-3 text-black">
-                  <p className="uppercase font-semibold">{card.name}</p>
-                  <p className="font-bold text-xl">{card.count}</p>
+        <div className="flex flex-wrap justify-center gap-4 p-4">
+          {stats.map((stat, index) => (
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/4 p-2">
+              <div className="p-4 rounded-lg shadow-lg bg-white flex justify-between flex-row items-center">
+                <div className="">
+                  <h2 className="mt-2 text-lg font-semibold">{stat.title}</h2>
+                  <p className="text-2xl font-bold">{stat.count}</p>
+                  <p className="text-sm text-gray-500">{stat.description}</p>
+                </div>
+                <div
+                  className={`w-12 h-12 ${stat.color} rounded-full flex items-center justify-center`}
+                >
+                  {stat.icon}
                 </div>
               </div>
             </div>
